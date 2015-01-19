@@ -126,9 +126,9 @@ $(document).ready(function(){
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="bs-example">
-								<s:form action="resultAction" method="POST" enctype="multipart/form-data">
+								<s:form action="resultAction" namespace="/" method="POST" enctype="multipart/form-data">
 									<s:file name="fileUpload" label="Select a File to upload" size="40" />
-									<s:submit value="Enviar" name="submit" />
+									<s:submit value="submit" name="submit" />
 								</s:form>
 							</div>
 						</div>

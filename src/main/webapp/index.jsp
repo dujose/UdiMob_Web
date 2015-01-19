@@ -1,5 +1,4 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
-
 <!DOCTYPE html>
 <!-- saved from url=(0062)http://www.cliptheme.com/preview/admin/clip-one/login_example2 -->
 <html lang="en" class="no-js"><!--<![endif]--><!-- start: HEAD --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -36,34 +35,30 @@
 	<!-- start: BODY -->
 	<body class="login example2" style='background-image: url("imagem/bg_2.png"); background-color: rgba(255, 255, 255, 0);'>
 		<div class="main-login col-sm-4 col-sm-offset-4">
-			<div class="logo">UdiMob
-			</div>
+			<div class="logo">UdiMob</div>
 			<!-- start: LOGIN BOX -->
 			<div class="box-login" style="display: block;">
 				<h3>Faça o login na sua conta</h3>
 				<p>
 					Por favor entre com o seu usuário e senha para fazer o login
 				</p>
-				<form class="form-login" action="http://www.cliptheme.com/preview/admin/clip-one/index.html" novalidate="novalidate">
+				<form class="form-login" method="post" action="<s:url value="/login/fazerLogin"/>" novalidate="novalidate">
 					<div class="errorHandler alert alert-danger no-display">
 						<i class="fa fa-remove-sign"></i> You have some form errors. Please check below.
 					</div>
 					<fieldset>
 						<div class="form-group">
 							<span class="input-icon">
-								<input type="text" class="form-control" name="usuario" placeholder="Usuário">
+								<input type="text" class="form-control" name="login" placeholder="Usuário">
 								</span>
 						</div>
 						<div class="form-group form-actions">
 							<span class="input-icon">
-								<input type="password" class="form-control password" name="password" placeholder="Senha">								
+								<input type="password" class="form-control password" name="senha" placeholder="Senha">								
 							</span>
 						</div>
 						<div class="form-actions">
-							
-							<button type="submit" class="btn btn-bricky pull-right">
-								Login 
-							</button>
+							<button type="submit" class="btn btn-bricky pull-right"> Login </button>
 						</div>
 						<div class="new-account">
 							Não tem uma conta ainda?
