@@ -2,7 +2,6 @@ package br.com.udimob.service;
 
 import java.util.List;
 
-import br.com.udimob.dto.Imovel;
 import br.com.udimob.exceptions.UdimobGenericException;
 
 /**

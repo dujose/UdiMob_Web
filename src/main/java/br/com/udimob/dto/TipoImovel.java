@@ -21,6 +21,13 @@ public class TipoImovel implements Serializable {
 	@Column(name="descricao")
 	private String descricao;
 
+	/**
+	 * Casa-Venda
+	 * Casa-Aluguel
+	 * Apartamento-Venda
+	 * Apartamento-Aluguel
+	 */
+	
 	public Integer getIdTipoImovel() {
 		return idTipoImovel;
 	}

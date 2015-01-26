@@ -6,4 +6,5 @@ import br.com.udimob.dto.TipoImovel;
 
 public interface TipoImovelDAO extends JpaRepository<TipoImovel, Integer> {
 
+	TipoImovel findByDescricao(String descricao);
 }

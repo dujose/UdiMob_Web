@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.udimob.dao.TipoImovelDAO;
 import br.com.udimob.dto.TipoImovel;
+import br.com.udimob.exceptions.UdimobGenericException;
 import br.com.udimob.service.TipoImovelService;
 
 @Service(value = "tipoImovelService")
@@ -19,6 +20,14 @@ public class TipoImovelServiceImpl extends GenericServiceImpl<TipoImovel> implem
 		return tipoImovelDAO;
 	}
 
+	public TipoImovel findByDescricao(String descricao) throws UdimobGenericException {
+		try {
+			return tipoImovelDAO.findByDescricao(descricao);
+		} catch (Exception e) {
+			throw new UdimobGenericException(e.getMessage(), e);
+		}
+	}
+	
 	public void setTipoImovelDAO(TipoImovelDAO tipoImovelDAO) {
 		this.tipoImovelDAO = tipoImovelDAO;
 	}
