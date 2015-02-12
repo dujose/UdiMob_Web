@@ -33,7 +33,6 @@
 <script>                              
 $(document).ready(function(){
 	$('.btn-logout').click(function() {
-		$(location).attr('href','index.jsp');
 	});
 	
 });
@@ -55,7 +54,7 @@ $(document).ready(function(){
 					<div class="col-lg-3 navbar-header">
 					<!-- start: TOP NAVIGATION MENU -->
 						<div class="nav navbar-right" style="padding: 5px;">
-							<form action="<s:url value="/principal"/>" method="post">	
+							<form action="<s:url value="/"/>" method="post">	
 								<button type="submit" class="btn btn-primary btn-sm btn-logout"> Logout </button>
 							</form>
 						</div>
@@ -68,19 +67,10 @@ $(document).ready(function(){
 		<div class="main-container">
 			<div class="navbar-content">
 				<div class="main-navigation navbar-collapse collapse">
-					<div class="navigation-toggler">
-						<i class="clip-chevron-left"></i>
-						<i class="clip-chevron-right"></i>
-					</div>
 					<ul class="main-navigation-menu">
 						<li>
 							<a  href="<s:url value="/principal"/>"><i class="clip-home-3"></i>
 								<span class="title"> UdiMob </span><span class="selected"></span>
-							</a>
-						</li>
-						<li>
-							<a href="maps.jsp"><i class="clip-screen"></i>
-								<span class="title"> Mapa </span><span class="selected"></span>
 							</a>
 						</li>
 					</ul>
@@ -112,16 +102,6 @@ $(document).ready(function(){
 				</div>
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<input type="text" placeholder="Buscar Imóvel">
-									<button class="submit">
-										<i class="clip-search-3"></i>
-									</button>
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">

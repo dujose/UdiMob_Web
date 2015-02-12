@@ -17,8 +17,8 @@
 <link rel="stylesheet" href="<s:url value="/assets/css/print.css"/>" type="text/css" media="print" />
 <link rel="shortcut icon" href="favicon.ico" />
 
-
 <script type="text/javascript" src='<s:url value="/assets/js/jquery-1.11.1.min.js" />'></script>
+<script type="text/javascript" src='<s:url value="/assets/plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js" />'></script>
 <script type="text/javascript" src='<s:url value="/assets/plugins/bootstrap/js/bootstrap.min.js" />'></script>
 <script type="text/javascript" src='<s:url value="/assets/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" />'></script>
 <script type="text/javascript" src='<s:url value="/assets/plugins/blockUI/jquery.blockUI.js" />'></script>
@@ -32,18 +32,9 @@
 
 <script>                              
 $(document).ready(function(){
-	/*$('#teste').click( function() {
-		$(location).attr('href',"cadastroImobiliaria");
+	$('.btn-logout').click(function() {
 	});
 	
-	$('.btn-teste').click(function() {
-		$.post("/cadastroImobiliaria",
-        		function(data){
-        			if(data['success']){
-        			} else {
-        			}
-        });
-	}); */
 });
 </script>
 </head>
@@ -52,21 +43,19 @@ $(document).ready(function(){
 		<div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-6 navbar-header">
+					<div class="col-lg-9 navbar-header">
 						<button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
 							<span class="clip-list-2"></span>
 						</button>
-						<a class="navbar-brand" href="<s:url value="/principal"/>">
+						<a class="navbar-brand"  href="<s:url value="/principal"/>">
 							UdiMob
 						</a>
 					</div>
-					<div class="col-lg-6 navbar-header">
+					<div class="col-lg-3 navbar-header">
 					<!-- start: TOP NAVIGATION MENU -->
 						<div class="nav navbar-right" style="padding: 5px;">
-							<form action="<s:url value="/login/fazerLogin"/>"  method="post">
-								<input type="text" placeholder="Login" name="login" id="login" value="${login}">
-								<input type="password" placeholder="Senha" name="senha" id="senha" value="${senha}">
-								<button type="submit" class="btn btn-primary btn-sm" style="margin-top: -3px;"> Login </button>
+							<form action="<s:url value="/"/>" method="post">	
+								<button type="submit" class="btn btn-primary btn-sm btn-logout"> Logout </button>
 							</form>
 						</div>
 					</div>
@@ -78,24 +67,10 @@ $(document).ready(function(){
 		<div class="main-container">
 			<div class="navbar-content">
 				<div class="main-navigation navbar-collapse collapse">
-					<div class="navigation-toggler">
-						<i class="clip-chevron-left"></i>
-						<i class="clip-chevron-right"></i>
-					</div>
 					<ul class="main-navigation-menu">
 						<li>
 							<a  href="<s:url value="/principal"/>"><i class="clip-home-3"></i>
 								<span class="title"> UdiMob </span><span class="selected"></span>
-							</a>
-						</li>
-						<li>
-							<a href="maps.jsp"><i class="clip-screen"></i>
-								<span class="title"> Mapa </span><span class="selected"></span>
-							</a>
-						</li>
-						<li>
-							<a href="<s:url value="/cadastroImobiliaria"/>"><i class="clip-screen"></i>
-								<span class="title"> Imobiliaria </span><span class="selected"></span>
 							</a>
 						</li>
 					</ul>
@@ -127,20 +102,12 @@ $(document).ready(function(){
 				</div>
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
-							<div class="col-sm-12">
-								<div class="form-group">
-									<input type="text" placeholder="Buscar Imóvel">
-									<button class="submit">
-										<i class="clip-search-3"></i>
-									</button>
-								</div>
-							</div>
-						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-12">
-							<h3> Dados salvos com sucesso! </h3>
+							<div class="bs-example">
+								<h1> Arquivo Salvo com sucesso! </h1>
+							</div>
 						</div>
 					</div>
 				</div>

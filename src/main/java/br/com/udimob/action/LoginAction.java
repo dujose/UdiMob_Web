@@ -66,6 +66,12 @@ public class LoginAction extends GenericAction {
 		
 		return ERROR;
 	}
+	
+	@Action(value = "fazerLogout", results = {@Result(name = "success", location="/index.jsp"),
+											  @Result(name = "error", location = "/index.jsp")})
+	public String fazerLogout() {
+		return SUCCESS;
+	}
 
 	public String getLogin() {
 		return login;

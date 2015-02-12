@@ -19,8 +19,8 @@ public class PrincipalAction extends GenericAction {
 
 	private List<Imovel> imoveis;
 	
-	@Action(value = "index", results = {@Result(name = "success", location="/index.jsp"),
-										@Result(name = "error", location = "/index.jsp")})
+	@Action(value = "index", results = {@Result(name = "success", location="/imobiliaria.jsp"),
+										@Result(name = "error", location = "/imobiliaria.jsp")})
 	public String index() {
 		try {
 			imoveis = new ArrayList<Imovel>();
